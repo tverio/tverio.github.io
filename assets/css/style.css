@@ -6801,6 +6801,21 @@ button[type="submit"] .loading {
 .modal-box.paypal-modal .pseudo-select {
   margin-bottom: 10px;
 }
+
+.icon-500px {
+ background-image: url("../img/500_16x16.png");
+ height: 16px;
+ width: 16px;
+ margin-bottom: -4px;
+ display: inline-block;
+}
+
+.photo-copy {
+ color: rgb(254,73,24);
+ display: inline-block;
+ font-size: 11px; 
+}
+
 @media (min-width: 1200px) {
   .venue-section .left-col {
     width: 27%;
