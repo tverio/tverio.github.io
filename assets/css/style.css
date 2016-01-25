@@ -2041,7 +2041,7 @@ h6,
 }
 h5.heading-alt {
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.7;
   letter-spacing: 0.5em;
   color: #262627;
@@ -2217,6 +2217,9 @@ span {
   .sub-title,
   .sub-title.big {
     font-size: 15px;
+  }
+  h5.heading-alt {
+    font-size: 12px;
   }
 }
 /* ----------------------------------------------------------------------------
@@ -2649,7 +2652,7 @@ li {
     width: 100%;
   }
   .bg-cover {
-    background-attachment: scroll;
+    /*background-attachment: scroll;*/
   }
   .heading-block {
     padding: 40px 0;
@@ -6608,12 +6611,15 @@ button[type="submit"] .loading {
 ---------------------------------------------------------------------------- */
 .bg1 {
   background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+/*  background-attachment: fixed;*/
 }
 .bg2 {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg2.jpg");
 }
 .bg3 {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg3.jpg");
 }
 .bg4 {
   background-image: url("../img/bg.jpg");
