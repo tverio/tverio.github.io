@@ -8,6 +8,8 @@ const robots      = require('metalsmith-robots');
 const sitemap     = require('metalsmith-mapsite');
 const htmlmin     = require('metalsmith-html-minifier');
 const browserSync = require('metalsmith-browser-sync');
+const publish = require('metalsmith-publish');
+
 
 const NODE_ENV = process.env.NODE_ENV;
 const ms =  Metalsmith(__dirname);
@@ -24,7 +26,9 @@ ms.metadata({
   .use(debug())
   .use(markdown())
   .use(permalinks())
-
+  .use(publish({
+    draft: true
+  }))
   .use(layouts({
     engine: 'handlebars'
   }))

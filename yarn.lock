@@ -1414,6 +1414,12 @@ metalsmith-permalinks@^0.5.0:
     slug-component "~1.1.0"
     substitute "https://github.com/segmentio/substitute/archive/0.0.1.tar.gz"
 
+metalsmith-publish@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/metalsmith-publish/-/metalsmith-publish-0.1.5.tgz#cba9219b9396736b90866645930a89aeec923540"
+  dependencies:
+    debug "~0.7.4"
+
 metalsmith-robots@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/metalsmith-robots/-/metalsmith-robots-1.0.1.tgz#e2ef5a190352d5d50a273ee358bb101bd2ad8087"
