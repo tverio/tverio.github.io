@@ -34,7 +34,7 @@ ms.metadata({
   }))
   .use(sitemap('http://tver.io'))
   .use(assets({
-    source: '../assets',
+    source: './assets',
     destination: './assets'
   }))
   .use(htmlmin('*.html'));
