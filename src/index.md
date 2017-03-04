@@ -19,8 +19,3 @@ date: 2017-03-03
   <a href="http://bit.ly/tverio" target="_blank" class="btn btn-md">Get my invite to Slack!</a>
             <!-- <a href="http://bit.ly/tveriodonate" class="btn btn-sm btn-outline-clr">Donate</a> -->
 </div>
-
-<p>Наши встречи:</p>
-<ul>
-    <li><a href="/meetup/meetup-1-2017">Tver.io Meetup #1 in 2017</a></li>
-</ul>

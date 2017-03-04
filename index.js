@@ -9,6 +9,7 @@ const sitemap     = require('metalsmith-mapsite');
 const htmlmin     = require('metalsmith-html-minifier');
 const browserSync = require('metalsmith-browser-sync');
 const publish     = require('metalsmith-publish');
+const collections = require('metalsmith-collections');
 
 const NODE_ENV = process.env.NODE_ENV;
 const ms =  Metalsmith(__dirname);
@@ -19,7 +20,7 @@ ms.metadata({
     keywords: "Сообщество, ИТ, конференции в Твери, митап",
     author: "tver.io",
     image: "http://tver.io//assets/img/logo.png",
-    url: "http://tver.io/"
+    url: "http://tver.io/",
   })
   .clean(true)
   .source('./src')
@@ -30,6 +31,22 @@ ms.metadata({
   .use(publish({
     draft: true
   }))
+  .use(collections())
+  .use((files, metalsmith, done)=> {
+    // collection fix path
+    if (!metalsmith._metadata.collections) {
+      return;
+    }
+    Object.keys(metalsmith._metadata.collections)
+      .filter(name => name !== 'metadata')
+      .forEach(name => {
+        const p = metalsmith._metadata.collections[name];
+        p.forEach(meta => {
+          meta.path = meta.path.replace(/\/index\.html$/, '');
+        });
+      });
+    done();
+  })
   .use(layouts({
     engine: 'handlebars',
     partials: 'layouts/partials'

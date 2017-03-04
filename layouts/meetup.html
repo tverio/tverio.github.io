@@ -10,23 +10,12 @@
   {{>_css}}
 </head>
 <body>
-  <div class="preloader-mask">
-    <div class="preloader"></div>
-  </div>
   {{>_metrica}}
   <section id="hero" class="hero-section bg1 bg-cover window-height light-text">
     {{>_social}}
     <div class="heading-block centered-block align-center">
       <div class="container">
-        {{{ contents }}}    
-        {{#if collections.meetup}}    
-        <p>Наши встречи:</p>
-        <ul>
-          {{#each collections.meetup}}
-          <li><a href="{{ this.path }}">{{ this.title }}</a></li>
-          {{/each}}
-        </ul>
-        {{/if}}
+        {{{ contents }}}
       </div>
     </div>
     <div style="position: absolute; bottom: 5px; right: 5px;">

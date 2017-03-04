@@ -1,7 +1,8 @@
 ---
-title: Tver.io Meetup #1 in 2017
+title: Tver.io Meetup 1 in 2017
 date: 2017-02-28
-layout: layout.html
+collection: meetup
+layout: meetup.html
 ---
 ## Доклады на Tver.io Meetup #1 in 2017
 
