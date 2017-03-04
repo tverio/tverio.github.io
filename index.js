@@ -12,6 +12,7 @@ const htmlmin     = require('metalsmith-html-minifier');
 const browserSync = require('metalsmith-browser-sync');
 const publish     = require('metalsmith-publish');
 const collections = require('metalsmith-collections');
+const updated     = require('metalsmith-updated');
 
 const NODE_ENV = process.env.NODE_ENV;
 const ms =  Metalsmith(__dirname);
@@ -24,7 +25,7 @@ ms.metadata({
     image: "http://tver.io//assets/img/logo.png",
     url: "http://tver.io/",
   })
-  .clean(true)
+  .clean(false)
   .source('./src')
   .destination('./build')
   .use(debug())
@@ -47,7 +48,10 @@ ms.metadata({
     source: './assets',
     destination: './assets'
   }))
-  .use(htmlmin('*.html'));
+  .use(htmlmin('*.html'))
+  .use(updated({
+    updatedFile: '../build/.updated.json'
+  }));
 
 if (NODE_ENV === 'development') {
   ms.use(browserSync({
