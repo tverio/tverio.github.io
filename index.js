@@ -8,17 +8,18 @@ const robots      = require('metalsmith-robots');
 const sitemap     = require('metalsmith-mapsite');
 const htmlmin     = require('metalsmith-html-minifier');
 const browserSync = require('metalsmith-browser-sync');
-const publish = require('metalsmith-publish');
-
+const publish     = require('metalsmith-publish');
 
 const NODE_ENV = process.env.NODE_ENV;
 const ms =  Metalsmith(__dirname);
 
 ms.metadata({
-    title: "My Static Site & Blog",
-    description: "It's about saying »Hello« to the World.",
-    generator: "Metalsmith",
-    url: "http://www.metalsmith.io/"
+    title: "Тверское ИТ-сообщество",
+    description: "Тверское ИТ-сообщество tver.io",
+    keywords: "Сообщество, ИТ, конференции в Твери, митап",
+    author: "tver.io",
+    image: "http://tver.io//assets/img/logo.png",
+    url: "http://tver.io/"
   })
   .clean(true)
   .source('./src')
@@ -30,7 +31,8 @@ ms.metadata({
     draft: true
   }))
   .use(layouts({
-    engine: 'handlebars'
+    engine: 'handlebars',
+    partials: 'layouts/partials'
   }))
   .use(robots({
     useragent: '*',
