@@ -5,7 +5,7 @@
     "start": "NODE_ENV=development node index.js",
     "debug": "DEBUG=metalsmith:* node index.js",
     "build": "NODE_ENV=production node index.js",
-    "deploy": "npm run build && gh-pages -d build -b master"
+    "deploy": "node_modules/.bin/gh-pages -d build -b master"
   },
   "dependencies": {
     "gh-pages": "^0.12.0",
