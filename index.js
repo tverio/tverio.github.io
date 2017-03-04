@@ -1,3 +1,5 @@
+'use strict';
+
 const Metalsmith  = require('metalsmith');
 const markdown    = require('metalsmith-markdown');
 const layouts     = require('metalsmith-layouts');
@@ -27,26 +29,11 @@ ms.metadata({
   .destination('./build')
   .use(debug())
   .use(markdown())
-  .use(permalinks())
   .use(publish({
     draft: true
   }))
   .use(collections())
-  .use((files, metalsmith, done)=> {
-    // collection fix path
-    if (!metalsmith._metadata.collections) {
-      return;
-    }
-    Object.keys(metalsmith._metadata.collections)
-      .filter(name => name !== 'metadata')
-      .forEach(name => {
-        const p = metalsmith._metadata.collections[name];
-        p.forEach(meta => {
-          meta.path = meta.path.replace(/\/index\.html$/, '');
-        });
-      });
-    done();
-  })
+  .use(permalinks())  
   .use(layouts({
     engine: 'handlebars',
     partials: 'layouts/partials'
