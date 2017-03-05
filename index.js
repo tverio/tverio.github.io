@@ -53,8 +53,13 @@ ms.metadata({
     if (!files['CNAME']) {
       files['CNAME'] = {
         contents: new Buffer('tver.io')
-      }
+      };      
     }
+    if (files['Readme.md']) {
+      files['Readme.md'] = {
+        contents: new Buffer('# tverio.github.io\n\nTver.io website')
+      };
+    }      
     done();
   })
   .use(updated({
