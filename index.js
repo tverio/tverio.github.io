@@ -49,6 +49,14 @@ ms.metadata({
     destination: './assets'
   }))
   .use(htmlmin('*.html'))
+  .use((files, metalsmith, done)=> {
+    if (!files['CNAME']) {
+      files['CNAME'] = {
+        contents: new Buffer('tver.io')
+      }
+    }
+    done();
+  })
   .use(updated({
     updatedFile: '../.updated.json'
   }));
