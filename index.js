@@ -50,7 +50,7 @@ ms.metadata({
   }))
   .use(htmlmin('*.html'))
   .use(updated({
-    updatedFile: '../build/.updated.json'
+    updatedFile: '../.updated.json'
   }));
 
 if (NODE_ENV === 'development') {
