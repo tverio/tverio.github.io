@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PubConf в Декабристе</title>
+  <link rel="stylesheet" media="all" href="css/nodeppt.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/phone.css">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="js/highlight/styles/monokai_sublime.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/theme.jonny.css">
+</head>
+<body>
+<div class="slides">
+  <slides id="container">
+
+    <slide class="slide">
+      <section class="slide-wrapper">
+        <article class="flexbox vcenter">
+          <img src="img/tverio.jpg" width="800" height="800" alt="Tver.IO"/>
+          <h3 class="green-2">tver.io/pubconf</h3>
+        </article>
+      </section>
+    </slide>
+
+    <slide class="slide">
+      <section class="slide-wrapper">
+        <article class="flexbox vcenter">
+          <h1 style="font-size: 4rem;" class="green-2">#PubConf</h1>
+          <h2>17 августа '17 в <a href="https://vk.com/dekabristtver" target="_blank">Декабристе</a></h2>
+          <h2>#tverio #декабристпаб</h2>
+        </article>
+      </section>
+    </slide>
+
+    <slide class="slide">
+      <section class="slide-wrapper">
+        <article class="flexbox vcenter">
+          <h1 class="blue-2">Что будет?</h1>
+          <h3><a target="_blank" href="https://www.meetup.com/tverio/events/242438357">3 доклада</a></h3>
+          <h3>Много пива и пиццы</h3>
+          <h3>Лотерея</h3>
+        </article>
+      </section>
+    </slide>
+
+    <slide class="slide">
+      <section class="slide-wrapper">
+        <article class="flexbox vcenter">
+          <h1 class="red-2">Правила</h1>
+          <h3>1. Отметиться о прибытии у <a href="http://jonnynovikov.com" target="_blank">@jonny</a></h3>
+          <h3>2. Получить купоны участника (30% скидка на розлив)</h3>
+          <h3>3. Розыгрыш в баре в конце мероприятия</h3>
+        </article>
+      </section>
+    </slide>
+
+    <slide class="slide">
+      <section class="slide-wrapper">
+        <article>
+          <div id="animation">
+            <div class="ring one">
+              <div class="electron"></div>
+              <p></div>
+            </p>
+            <div class="ring two">
+              <div class="electron"></div>
+              <div class="electron"></div>
+            </div>
+
+            <div class="ring three">
+              <div class="electron"></div>
+              <div class="electron"></div>
+              <div class="electron"></div>
+            </div>
+          </div>
+
+          <div class="lastContent">
+            <h1 class="thankyou">Приятного отдыха!</h1>
+          </div>
+        </article>
+      </section>
+    </slide>
+
+    <div class="slideTip" id="tip"></div>
+  </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+  <div class="_btn-box" id="_btn-box" style="display:none;">
+    <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+    <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+    <button class="fa fa-paint-brush" id="_btn-brush"></button>
+    <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+  </div>
+  <button class="fa fa-bars" id="_btn-bar" data-toggle="fa fa-close"></button>
+</div>
+<script src="js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+  var base = location.protocol + '//' + location.host;
+
+  var path = (location.pathname + '#').split('/').filter(function (v) {
+    return !!v;
+  });
+  path.pop();
+  path = path.join('/');
+  MixJS.config({
+    baseURL: [base, path, 'js'].join('/') + '/'
+  });
+</script>
+<script src="js/mixjs/lib/event/broadcast.js"></script>
+<script src="js/nodeppt.js"></script>
+<script>
+  Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'zoomin',
+    width: 1100,
+    dir: './',
+
+    control: {
+      type: 'postMessage',
+      args: {
+        isControl: false
+      }
+    },
+    tipID: 'tip'
+  });
+  MixJS.loadJS('highlight/highlight.pack.js', function () {
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+  });
+</script>
+<script src="js/demo.js"></script>
+<link rel="stylesheet" href="css/demo.css">
+<!--placeholder-->
+</body>
+</html>
