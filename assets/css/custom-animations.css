@@ -1,4 +1,17 @@
 @import 'lib/animate.css';
+
+.link__meetup {
+  color: white;
+  font-size: 16px;
+}
+
+.link__meetup.link__meetup--active {
+  font-size: 18px;
+}
+
+.event-header {
+  color: #fe4918;
+}
 /* ----------------------------------------------------------------------------
     Animations
 ---------------------------------------------------------------------------- */
