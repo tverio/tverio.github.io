@@ -5,9 +5,10 @@
   font-size: 16px;
 }
 
-.link__meetup-sm {
+.link__meetup-sm,
+.link__meetup-sm:visited {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .link__meetup.link__meetup--active {
