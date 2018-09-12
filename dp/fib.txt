@@ -1,0 +1,60 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class DPLab1
+{
+    public static Dictionary<int, int> memo = new Dictionary<int, int>();
+
+    public static int[] fib = new int[100];
+    public static int max_i = 3;
+
+    static DPLab1()
+    {
+        fib[0] = fib[1] = fib[2] = 1;
+    }
+
+    public static int Fib_Recursive(int n)
+    {
+        if (n <= 2) return 1;
+        return Fib_Recursive(n - 2) + Fib_Recursive(n - 1);
+    }
+
+    public static int Fib_Loop(int n)
+    {
+        if (n < 3) return 1;
+        int f, f1 = 1, f2 = 1;
+        for(int i = 3; i <= n; i++)
+        {                                          
+            f = f1 + f2;
+            f1 = f2;
+            f2 = f;
+        }
+        return f2;
+    }
+
+    public static int Fib_Loop_Memo(int n)
+    {
+        if (n < max_i) return fib[n];
+
+        for (int i = max_i; i <= n; i++)
+        {
+            fib[i] = fib[i-2] + fib[i-1];
+        }
+
+        max_i = n;
+        return fib[n];
+    }
+
+    public static int Fib_Memo(int n)
+    {
+        if (memo.TryGetValue(n, out var ret))
+            return ret;
+
+        ret = Fib_Recursive(n);
+        memo[n] = ret;
+        return ret;
+    }
+}
+
+// Console.WriteLine(DPLab1.Fib_Loop_Memo(6));
