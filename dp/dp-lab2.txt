@@ -1,0 +1,62 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class LabWalker
+{
+    public void PrintLabyrinth(char[,] labyrinth)
+    {
+        for (int i = 0; i < labyrinth.GetLength(0); i++)
+        {
+            for (int j = 0; j < labyrinth.GetLength(1); j++)
+            {
+                var c = labyrinth[i, j];
+                if (c == ' ') c = '_';
+                Console.Write($"{c,3}");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+
+    public bool IsExitExists(char[,] labyrinth)
+    {
+        throw new Exception("I don't know!");
+    }
+
+}
+
+public class Labyrinth
+{
+    public static readonly char[,] Problem1 =
+    {
+        {'*', '*', '*', '*', '*', '*'},
+        {' ', '*', ' ', ' ', ' ', '*'},
+        {'*', 's', ' ', '*', ' ', '*'},
+        {'*', '*', '*', '*', ' ', '*'},
+        {' ', ' ', 'e', ' ', ' ', '*'},
+        {' ', '*', '*', '*', ' ', '*'}
+    };
+
+    public static readonly char[,] Problem2 =
+    {
+        {' ', 's', ' ', '*', ' ', ' ', ' '},
+        {' ', '*', '*', '*', ' ', '*', ' '},
+        {' ', ' ', ' ', ' ', ' ', '*', ' '},
+        {' ', ' ', '*', '*', ' ', '*', ' '},
+        {'*', ' ', ' ', ' ', ' ', '*', 'e'},
+    };
+
+    // problem with no path to exit
+    public static readonly char[,] Problem3 =
+    {
+        {' ', 's', ' ', '*', ' ', ' ', ' '},
+        {' ', '*', '*', '*', ' ', '*', ' '},
+        {' ', ' ', ' ', ' ', ' ', '*', ' '},
+        {' ', ' ', '*', '*', ' ', '*', '*'},
+        {'*', ' ', ' ', ' ', ' ', '*', 'e'},
+    };
+}
+
+var walker = new LabWalker();
+walker.PrintLabyrinth(Labyrinth.Problem1);
