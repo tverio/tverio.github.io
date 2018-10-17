@@ -35,7 +35,7 @@
 }
 
 .section-list > li {
-    
+
     padding-bottom: 5px !important;
 }
 
@@ -47,8 +47,8 @@
     margin-bottom: 15px;
 }
 
-.price:after { 
-    content:"\20BD"; 
+.price:after {
+    content: "\20BD";
 }
 
 .col-centered {
@@ -97,41 +97,49 @@
         width: calc(25% - 20px);
     }
 
-        .main-nav .navbar {
-            border-radius: 0px;
-            border-width: 0px;
-            height: 100%;
-        }
+    .main-nav .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
 
-        .main-nav .navbar-header {
-            float: none;
-        }
+    .main-nav .navbar-header {
+        float: none;
+    }
 
-        .main-nav .navbar-collapse {
-            border-top: 1px solid #444;
-            padding: 0px;
-        }
+    .main-nav .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
 
-        .main-nav .navbar ul {
-            float: none;
-        }
+    .main-nav .navbar ul {
+        float: none;
+    }
 
-        .main-nav .navbar li {
-            float: none;
-            font-size: 15px;
-            margin: 6px;
-        }
+    .main-nav .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
 
-            .main-nav .navbar li a {
-                padding: 10px 16px;
-                border-radius: 4px;
-            }
+    .main-nav .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
 
-        .main-nav .navbar a {
-            /* If a menu item's text is too long, truncate it */
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    .main-nav .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.header_top-bg {
+    margin-top: 80px;
+}
+
+.header_bottom-bg {
+    margin-top: 50px;
 }
