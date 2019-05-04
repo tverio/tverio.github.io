@@ -1,0 +1,12 @@
+.shower {
+    --color-key: #ff7e26;
+    --color-light: #323330;
+}
+
+.slide--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0;
+}
