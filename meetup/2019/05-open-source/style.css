@@ -10,3 +10,17 @@
     flex-direction: column;
     padding-top: 0;
 }
+
+.partners-grid {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-image {
+    width: 100%;
+}
