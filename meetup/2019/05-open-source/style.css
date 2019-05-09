@@ -22,11 +22,27 @@
 }
 
 .partner-image {
-    width: 100%;
+    width: 80%;
 }
 
 .avatar-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.avatar {
+    height: 80px;
+}
+
+.contributors-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+
+}
+
+.avatar-name {
+    text-align: center;
+    font-size: .5em;
 }
