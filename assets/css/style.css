@@ -176,7 +176,6 @@ body {
     height: 1px;
     width: 100%;
     background: var(--black-color);
-
 }
 
 .events-list__link:hover:after {
