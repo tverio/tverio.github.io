@@ -128,6 +128,10 @@ body {
     }
 }
 
+.events-list--upcoming {
+    font-weight: 800;
+}
+
 .events-list__item + .events-list__item {
     margin-top: 1.8em;
 }
@@ -145,6 +149,10 @@ body {
         white-space: nowrap;
         max-width: calc(100vw - 5em);
     }
+}
+
+.events-list__item--upcoming {
+    font-weight: 800;
 }
 
 .events-list__link {
