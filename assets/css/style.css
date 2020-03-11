@@ -123,6 +123,11 @@ body {
     margin-top: 3em;
 }
 
+.header__title .header__title-link {
+    color: #000000;
+    text-decoration: none;
+}
+
 @media (max-width: 767px) {
     .events-list + .heading-h3 {
         margin-top: 2em;
