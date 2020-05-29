@@ -39,32 +39,7 @@
 	<link rel="apple-touch-icon" href="https://tver.io/assets/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="https://tver.io/assets/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="https://tver.io/assets/favicon/apple-touch-icon-114x114.png">
-
-	<script>
-		"use strict";
-		!function() {
-			var t = window.driftt = window.drift = window.driftt || [];
-			if (!t.init) {
-				if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-				t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-						t.factory = function(e) {
-							return function() {
-								var n = Array.prototype.slice.call(arguments);
-								return n.unshift(e), t.push(n), t;
-							};
-						}, t.methods.forEach(function(e) {
-					t[e] = t.factory(e);
-				}), t.load = function(t) {
-					var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-					o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-					var i = document.getElementsByTagName("script")[0];
-					i.parentNode.insertBefore(o, i);
-				};
-			}
-		}();
-		drift.SNIPPET_VERSION = '0.3.1';
-		drift.load('mk32nh8336mw');
-	</script>
+	<script type='text/javascript'>var _hoid = _hoid || []; _hoid.push('ho_81AGaeUHxDcFW37uTX6gNEYCbPqtydKQ29rvhB0SmZwsVzM');var heyopath = (('https:' == document.location.protocol) ? 'https://www.heyoliver.com/webroot/ho-ui/v2/' : 'http://www.heyoliver.com/webroot/ho-ui/v2/');var heyospt = document.createElement('script'); heyospt.type = 'text/javascript';heyospt.async = true; heyospt.src = heyopath + 'ho2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(heyospt, s);</script>
 	<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("");
 </script>
 
@@ -96,7 +71,7 @@
 			</a>
 			<div id="ticket-wrap">
 				<p>
-					<a href="#">telegram chat</a>
+					<a href="https://t.me/tverio_nocode">telegram chat</a>
 				</p>
 				<a href="https://go.tver.io/stream-2020-05-28-youtube" target="_blank">Open live stream</a>
 			</div>
@@ -112,7 +87,7 @@
 						<div class="hero-main-title"><a href="https://tver.io">Tver.IO</a> No Code Talks</div>
 						<div class="hero-title">May 28, 19:00 MSK. Online event.</div>
 					</div>
-					<ul class="countdown">
+					<ul class="countdown" style="display: none;">
 						<li>
 							<span class="days">00</span>
 							<p class="days_ref">days</p>
