@@ -122,7 +122,7 @@
         blobs.push(blob);
         blob.intro();
     });
-    
+
     DOM.content = document.querySelector('.content--reveal');
     DOM.contentInner = Array.from(DOM.content.querySelectorAll('.content__inner'), (el) => {
         charming(el);
@@ -130,7 +130,7 @@
     });
     DOM.ctrlBack = DOM.content.querySelector('.content__close');
     DOM.links = Array.from(document.querySelectorAll('.menu > .menu__item'));
-    
+
     DOM.links.forEach((link, pos) => {
         link.style.pointerEvents = 'none';
         charming(link);
@@ -148,8 +148,8 @@
         });
 
         link.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            open(pos);
+            // ev.preventDefault();
+            // open(pos);
         });
     });
 
@@ -192,7 +192,7 @@
     const close = () => {
         if ( !this.isOpen ) return;
         this.isOpen = false;
-        
+
         const contentInner = DOM.contentInner[current];
         anime({
             targets: [contentInner.querySelectorAll('.content__title > span'), contentInner.querySelectorAll('.content__subtitle > span'), DOM.ctrlBack],
