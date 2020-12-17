@@ -75,7 +75,7 @@
 		// Countdown
 
         $('.countdown').downCount({
-            date: '12/17/2020 16:00:00'
+            date: '12/18/2020 16:00:00'
         }, function () {
             // alert('Event is over!');
         });
