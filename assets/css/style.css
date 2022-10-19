@@ -161,6 +161,20 @@ body {
     font-weight: 800;
 }
 
+.events-list__item--hidden {
+    display: none;
+}
+
+.event-list__item-button {
+    text-align: center;
+    text-decoration: none;
+}
+
+.events-list__item-vkpost {
+    margin-top: 2.8em;
+    margin-bottom: 2.8em;
+}
+
 .events-list__link {
     font-family: 'FuturaLightC', sans-serif;
     font-size: 1.8em;
