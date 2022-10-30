@@ -39,9 +39,17 @@ body {
     margin-top: 0em;
 }
 
+.center-section--more {
+    margin-top: 2em;
+}
+
 @media (max-width: 767px) {
     .center-section--events {
         margin-top: 0em;
+    }
+
+    .center-section--more {
+        margin-bottom: 4em;
     }
 }
 
