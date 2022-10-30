@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang=ru>
-<ul>
+<head>
     <meta charset=utf-8>
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -38,73 +38,12 @@
     <link rel=stylesheet type=text/css href=/assets/fonts/futura-face.css>
     <link rel=stylesheet type=text/css href=/assets/css/reset.css>
     <link rel=stylesheet type=text/css href=/assets/css/style.css>
+    <link rel=stylesheet type=text/css href=/assets/css/custom.min.css>
 
-    <script>
-        "use strict";
-        !function() {
-            var t = window.driftt = window.drift = window.driftt || [];
-            if (!t.init) {
-                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-                    t.factory = function(e) {
-                        return function() {
-                            var n = Array.prototype.slice.call(arguments);
-                            return n.unshift(e), t.push(n), t;
-                        };
-                    }, t.methods.forEach(function(e) {
-                    t[e] = t.factory(e);
-                }), t.load = function(t) {
-                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-                    var i = document.getElementsByTagName("script")[0];
-                    i.parentNode.insertBefore(o, i);
-                };
-            }
-        }();
-        drift.SNIPPET_VERSION = '0.3.1';
-        drift.load('mk32nh8336mw');
-    </script>
-    <script type=text/javascript>(function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter34896635 = new Ya.Metrika({
-                    id: 34896635,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true
-                });
-            } catch (e) {
-            }
-        });
-        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
-            n.parentNode.insertBefore(s, n);
-        };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");</script>
-    <noscript>
-        <div><img src=https://mc.yandex.ru/watch/34896635 style="position:absolute; left:-9999px" alt=""></div>
-    </noscript>
-    <script>(function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m);
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-40666452-6', 'auto');
-        ga('send', 'pageview');
-    </script>
-<body>
+    <script type=text/javascript src="/assets/js/app.js"></script>
+    <noscript><div><img src=https://mc.yandex.ru/watch/34896635 style="position:absolute; left:-9999px" alt=""></div></noscript>
+</head>
+<body class="body">
     <section class="center-section">
         <div class="header">
             <img src="/assets/img/logo_black.png" class="logo logo--main">
@@ -114,73 +53,60 @@
         </div>
 
         <h2 class="heading-h2">
-            Тверское IT-сообщество
+            Тверское ИТ-сообщество
         </h2>
 
         <div class="socials">
             <a href="http://go.tver.io/youtube">
-                <img src="/assets/img/iconmonstr-youtube-2.svg" class="social-icon" />
+                <img alt="Tver.IO Youtube channel" src="/assets/img/iconmonstr-youtube-2.svg" class="social-icon" />
             </a>
             <a href="https://go.tver.io/vk">
-                <img src="/assets/img/iconmonstr-vk-2.svg" class="social-icon" />
+                <img alt="Tver.IO VK group" src="/assets/img/iconmonstr-vk-2.svg" class="social-icon" />
             </a>
             <a href="https://go.tver.io/twitter">
-                <img src="/assets/img/iconmonstr-twitter-2.svg" class="social-icon" />
+                <img alt="Tver.IO Twitter" src="/assets/img/iconmonstr-twitter-2.svg" class="social-icon" />
             </a>
             <a href="https://go.tver.io/instagram">
-                <img src="/assets/img/iconmonstr-instagram-12.svg" class="social-icon" />
+                <img alt="Tver.IO Instagram" src="/assets/img/iconmonstr-instagram-12.svg" class="social-icon" />
             </a>
             <a href="https://go.tver.io/invite">
-                <img src="/assets/img/iconmonstr-slack-3.svg" class="social-icon" />
+                <img alt="Tver.IO Slack" src="/assets/img/iconmonstr-slack-3.svg" class="social-icon" />
             </a>
             <a href="https://github.com/tverio">
-                <img src="/assets/img/iconmonstr-github-2.svg" class="social-icon" />
+                <img alt="Tver.IO Github" src="/assets/img/iconmonstr-github-2.svg" class="social-icon" />
             </a>
             <a href="https://go.tver.io/telegram">
-                <img src="/assets/img/iconmonstr-telegram-2.svg" class="social-icon" />
+                <img alt="Tver.IO Telegram" src="/assets/img/iconmonstr-telegram-2.svg" class="social-icon" />
             </a>
         </div>
     </section>
 
-    <!--
-    <section class="center-section">
-        <h2 class="heading-h2">
-            Мы искренне верим, что сообщества объединяют людей и делают их профессиональную жизнь продуктивнее,
-            поэтому регулярно проводим митапы, организовываем курсы,
-            научные и популярные лекции и мастер-классы (напишите нашему боту <a href="https://go.tver.io/telegram">tverio_bot</a> для нетворкинга и получения расписания), обсуждения - в Tver.io <a href="https://go.tver.io/invite">Slack</a>
-        </h2>
-        <a class="community-mail" href="https://meetup.com/tverio/">Хочу на митап!</a>
+    <section class="center-section center-section--description">
+        <p class="heading-h4 heading-description">
+            Мы искренне верим, что сообщество tver.io объединяет талантливых людей и делает их профессиональную жизнь интереснее и продуктивнее.
+            Именно поэтому мы регулярно проводим митапы, научные и популярные лекции, а также организовываем курсы и мастер-классы.<br/>
+            Спасибо <a class="description__link" href="#partners">нашим партнерам</a> и всем, кто поддерживает и принимает участие в наших событиях.
+        </p>
     </section>
-    -->
 
     <section class="center-section center-section--events">
 
         <h3 class="heading-h3">Tver.IO Events 2022</h3>
 
-        <ul class="events-list">
+        <ul class="events-list events-list--upcoming">
 
-            <li class="events-list__item events-list--upcoming">
+            <li class="events-list__item">
                 <a class="events-list__link" href="https://go.tver.io/2022-10-21-meetup-tg" target="_blank">
                     21 октября 2022 г. - Tver.io Database Meetup
                 </a>
             </li>
             <li class="events-list__item events-list__item-vkpost">
-                <div class="events-list__item-vkpost__content">
-                    <div id="vk_post_-105949442_334"></div>
-                    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
-                    <script type="text/javascript">
-                        (function() {
-                            VK.Widgets.Post("vk_post_-105949442_334", -105949442, 334, 'TfeQST9s_FSxaqSfcTquq5BFrQ');
-                        }());
-                    </script>
-                </div>
+            <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-post="tverio_org/49" data-width="100%" data-userpic="false"></script>
             </li>
 
             <li class="events-list__item">
-                <a href="https://go.tver.io/meetup-2022-10-21" class="event-list__item event-list__item-button">
-                    <h3 class="heading-h3">
-                        Регистрация
-                    </h3>
+                <a class="events-list__link" href="https://go.tver.io/youtube">
+                    Посмотреть записи всех докладов
                 </a>
             </li>
 
@@ -387,17 +313,17 @@
         <ul class="events-list">
             <li class="events-list__item">
                 <a class="events-list__link" href="https://go.tver.io/meetup-2018-12-13">
-                    /dev/zero > Anniversary Meetup 13.12.2018
+                    Tver.io Anniversary Meetup 13 декабря 2018
                 </a>
             </li>
             <li class="events-list__item">
                 <a class="events-list__link" href="https://go.tver.io/2018-philosophy">
-                    Tver.io Philosophy Meetup 15.11.18
+                    Tver.io Philosophy Meetup 15 ноября 2018
                 </a>
             </li>
             <li class="events-list__item">
                 <a class="events-list__link" href="http://tver.io/rocket2018">
-                    Tver.io Rocket Meetup 18.10.18
+                    Tver.io Rocket Meetup 18 октября 2018
                 </a>
             </li>
         </ul>
@@ -412,7 +338,86 @@
                 Предложить доклад
             </a>
         </div>
+    </section>
 
+    <section id="partners" class="center-section center-section--partners">
+        <h2 class="header__title partners-header">
+            Партнеры сообщества
+        </h2>
+        <div class="partner-container">
+            <a aria-label="ТвГУ" target="_blank"
+               href="http://pmk.tversu.ru/" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo" src="/assets/img/partner/tsu.jpg" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Тверской Государственный Университет</p>
+                    </div>
+                </div>
+            </a>
+            <a aria-label="Кванториум" target="_blank"
+               href="https://kvantorium69.ru/" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo bg-white" src="/assets/img/partner/kvantorium.png" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Технопарк Кванториум</p>
+                    </div>
+                </div>
+            </a>
+            <a aria-label="Минцифры" target="_blank"
+               href="https://4822.digital" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo bg-white" src="/assets/img/partner/4822.png" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Министерство цифрового развития и информационных технологий Тверской области</p>
+                    </div>
+                </div>
+            </a>
+            <a aria-label="Орион" target="_blank"
+               href="http://oriontver69.ru/" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo" src="/assets/img/partner/orion69.jpg" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Образовательный центр Орион</p>
+                    </div>
+                </div>
+            </a>
+            <a aria-label="DSML" target="_blank"
+               href="https://dsml.ru/" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo" src="/assets/img/partner/dsml.png" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Digital-агентство DSML</p>
+                    </div>
+                </div>
+            </a>
+            <a aria-label="Brainhub" target="_blank"
+               href="https://brainhub-group.ru/" class="partner-item">
+                <div class="partner-item-content">
+                    <div class="p-0">
+                        <img class="partner-logo" src="/assets/img/partner/brainhub.jpg" alt="icon"/>
+                    </div>
+                    <div class="ml-3">
+                        <p class="partner-item-text">
+                            Brainhub Group</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section class="center-section center-section--email">
@@ -424,7 +429,7 @@
 
     <section class="center-section center-section--footer">
         <div class="footer">
-            <p class="footer__copyright">© 2020 Tver.io</p>
+            <p class="footer__copyright">© 2010-2022 Tver.io</p>
             <div class="footer__separator"></div>
             <div class="footer__links">
                 <a href="http://tver.io/privacy" class="footer__link">

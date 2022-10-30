@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node watch.js"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
