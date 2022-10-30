@@ -214,7 +214,7 @@ body {
 
 @media (max-width: 767px) {
     .events-list__link {
-        /* text-decoration: underline; */
+        text-decoration: underline;
     }
 }
 
